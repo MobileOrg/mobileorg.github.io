@@ -1,12 +1,16 @@
 .navbar.navbar-fixed-top
 	.navbar-inner
 		.container
-			%a.brand(href="#") MobileOrg
+			%a.brand(href="/") MobileOrg
 			.nav-collapse
 				%ul.nav
-					%li{:class => data.page.name == 'index' ? 'active' : ''}
-						%a(href="/") Home
-					%li{:class => data.page.name == 'twocolumns' ? 'active' : ''}
-						%a(href="twocolumns") Two Columns Layout
+					%li{:class => data.page.name == 'features' ? 'active' : ''}
+						%a(href="features") Features
+					%li{:class => data.page.name == 'docs' ? 'active' : ''}
+						%a(href="docs") Documentation
+					%li{:class => data.page.name == 'support' ? 'active' : ''}
+						%a(href="support") Support
+					%li{:class => data.page.name == 'dev' ? 'active' : ''}
+						%a(href="dev") Development
 					%li{:class => data.page.name == 'contact' ? 'active' : ''}
 						%a(href="contact") Contact

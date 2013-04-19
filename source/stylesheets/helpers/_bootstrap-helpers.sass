@@ -3,6 +3,13 @@
 
 $fluidLayout: false !default
 
+// these 4 were missing
+$gridColumnWidthLarge:    70px
+$gridGutterWidthLarge:    30px
+
+$gridColumnWidthTablet:   42px
+$gridGutterWidthTablet:   20px
+
 // This mixin is used internally by the helper and it's behavior is subject to change
 @mixin _makeColumn($columns: 1, $offset: 0, $colW: $gridColumnWidth, $gutterW: $gridGutterWidth, $fluid: $fluidLayout)
 	float: left
