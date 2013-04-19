@@ -1,10 +1,15 @@
 ---
+layout: "layouts/leftsidebar"
 title: "MobileOrg!"
 name: "index"
 ---
 = render_partial "partials/head"
-- content_for :head do
-	:javascript
-		// do stuff
+-#- content_for :head do
+-#	:javascript
+-#		// do stuff
+
+-# needs to be replaced with a mobile type image
+- content_for :sidebar do
+  %img{:src => "img/org-mode-unicorn-logo-large.png"}
 
 = render_partial "partials/hero"
