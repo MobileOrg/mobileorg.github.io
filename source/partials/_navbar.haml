@@ -1,0 +1,12 @@
+.navbar.navbar-fixed-top
+	.navbar-inner
+		.container
+			%a.brand(href="#") MobileOrg
+			.nav-collapse
+				%ul.nav
+					%li{:class => data.page.name == 'index' ? 'active' : ''}
+						%a(href="/") Home
+					%li{:class => data.page.name == 'twocolumns' ? 'active' : ''}
+						%a(href="twocolumns") Two Columns Layout
+					%li{:class => data.page.name == 'contact' ? 'active' : ''}
+						%a(href="contact") Contact

@@ -1,0 +1,63 @@
+@import "variables"
+@import "bootstrap/mixins"
+
+$fluidLayout: false !default
+
+// This mixin is used internally by the helper and it's behavior is subject to change
+@mixin _makeColumn($columns: 1, $offset: 0, $colW: $gridColumnWidth, $gutterW: $gridGutterWidth, $fluid: $fluidLayout)
+	float: left
+	margin-left: ($colW * $offset) + ($gutterW * ($offset - 1)) + ($gutterW * 2)
+	width: ($colW * $columns) + ($gutterW * ($columns - 1))
+	
+	@if $fluid == true
+		&:first-child
+			margin-left: 0
+
+@mixin row($fluid: $fluidLayout)
+	@if $fluid == true
+		width: 100%
+	@else
+		margin-left: $gridGutterWidth * -1
+		
+	@media (min-width: 1200px)
+		@if $fluid == true
+			margin-left: $fluidGridGutterWidthLarge * -1
+		@else
+			margin-left: $gridGutterWidthLarge * -1
+	@media (min-width: 768px) and (max-width: 979px)
+		@if $fluid == true
+			margin-left: $fluidGridGutterWidthTablet * -1
+		@else
+			margin-left: $gridGutterWidthTablet * -1
+	@media (max-width: 767px)
+		@if $fluid == true
+			width: 100%
+		@else
+			margin-left: 0
+		
+	@include clearfix
+
+@mixin col($columns: 1, $offset: 0, $fluid: $fluidLayout)
+	@if $fluid == true
+		@include _makeColumn($columns, $offset, $fluidGridColumnWidth, $fluidGridGutterWidth, false)
+	@else
+		@include _makeColumn($columns, $offset, $gridColumnWidth, $gridGutterWidth, false)
+	
+	@media (min-width: 1200px)
+		@if $fluid == true
+			@include _makeColumn($columns, $offset, $fluidGridColumnWidthLarge, $fluidGridGutterWidthLarge, true)
+		@else
+			@include _makeColumn($columns, $offset, $gridColumnWidthLarge, $gridGutterWidthLarge, false)
+
+	@media (min-width: 768px) and (max-width: 979px)
+		@if $fluid == true
+			@include _makeColumn($columns, $offset, $fluidGridColumnWidthTablet, $fluidGridGutterWidthTablet, true)
+		@else
+			@include _makeColumn($columns, $offset, $gridColumnWidthTablet, $gridGutterWidthTablet, false)
+
+	@media (max-width: 767px)
+		// Make all grid-sized elements block level again
+		float: none
+		display: block
+		width: auto
+		margin-left: 0

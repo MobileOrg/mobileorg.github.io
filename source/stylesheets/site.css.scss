@@ -1,0 +1,18 @@
+// I gather this file is a starting point for the project.
+@import "compass";
+
+// Use this file to override 
+@import "variables";
+
+// Imports bootstrap
+@import "bootstrap";
+
+// Include responsive Bootstrap styles
+@import "bootstrap-responsive";
+
+@import "helpers/bootstrap-helpers";
+
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
