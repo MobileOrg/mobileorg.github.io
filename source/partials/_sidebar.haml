@@ -1,31 +1,22 @@
 .well
-	%ul.nav.nav-list
-		%li.nav-header
-			List header
-		%li.active 
-			%a(href="#")  
-				%i.icon-white.icon-home
-				Home 
-		%li
-			%a(href="#") 
-				%i.icon-book
-				Library 
-		%li
-			%a(href="#")
-				%i.icon-pencil 
-				Applications
-		%li.nav-header 
-			Another list header
-		%li
-			%a(href="#")
-				%i.icon-user
-				Profile
-		%li
-			%a(href="#")
-				%i.icon-cog
-				Settings
-		%li.divider
-		%li
-			%a(href="#")
-				%i.icon-flag
-				Help
+  %ul.nav.nav-list
+    %li.nav-header
+      Documentation
+    %li{:class => data.page.name == 'basics' ? 'active' : ''}
+      %a(href="/docs/basics")
+        %i{:class => data.page.name == 'basics' ? 'icon-star' : 'icon-star-empty'}
+        Basics
+    %li{:class => data.page.name == 'ios' ? 'active' : ''}
+      %a(href="/docs/ios")
+        %i{:class => data.page.name == 'ios' ? 'icon-star' : 'icon-star-empty'}
+        iOS
+    %li{:class => data.page.name == 'android' ? 'active' : ''}
+      %a(href="/docs/android")
+        %i{:class => data.page.name == 'android' ? 'icon-star' : 'icon-star-empty'}
+        Android
+    -# TODO Android section?
+    %li.divider
+    %li
+      %a(href="/search")
+        %i.icon-search
+        Help
