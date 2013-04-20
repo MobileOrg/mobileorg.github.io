@@ -17,8 +17,9 @@ compass_config do |config|
 end
 
 ###
-# Helpers
+# Ignores
 ###
+ignore "/README.md"
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
