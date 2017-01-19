@@ -124,7 +124,7 @@ md5sum.exe or sha1sum.exe in your system path before org-mobile-push
 will succeed. You can find either of them here:
 http://gnuwin32.sourceforge.net/packages/coreutils.htm
 
-## Setup our WebDAV account
+## Setup your WebDAV account
 
 MobileOrg uses the WebDAV protocol to stay up-to-date and synchronize
 notes. WebDAV is a set of extensions to HTTP that allow client
