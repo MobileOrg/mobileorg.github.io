@@ -644,7 +644,7 @@ MobileOrg is thanks to the following:
  
 # License
 
-####GNU General Public License
+#### GNU General Public License
 
 _Version 2, June 1991_  
 _Copyright © 1989, 1991 Free Software Foundation, Inc.,_  
