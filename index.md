@@ -64,7 +64,7 @@ following documents to help you get even more from MobileOrg.
 
 [Capturing notes](#capturing-notes)
 
-[Integrating with Org-mode](#intergration-with-org-mode)
+[Integrating with Org-mode](#integration-with-org-mode)
 
 [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -113,13 +113,7 @@ should rename the newly created `MobileOrg (1)` folder to something that
 makes more sense, perhaps MobileOrg-staging before proceeding. Be sure
 your `org-mobile-directory` Emacs variable reflects this change.
 
-_ANOTHER NOTE:_ There is a bug in the current version that requires
-you to press ‘Enter’ on the iPhone keyboard after entering your
-password. If you click on ‘Log into Dropbox’ prior to pressing
-‘Enter’, you will receive a login error message. This will be fixed in
-the next version.
-
-_LAST NOTE:_ If you are a Windows user, you will need to have
+_ANOTHER NOTE:_ If you are a Windows user, you will need to have
 md5sum.exe or sha1sum.exe in your system path before org-mobile-push
 will succeed. You can find either of them here:
 http://gnuwin32.sourceforge.net/packages/coreutils.htm
@@ -138,7 +132,7 @@ server.
 Your org files, in whatever directory you would like. The examples
 below use an org subfolder with a primary Org-file named
 `index.org`. Other Org-files may reside alongside `index.org` if you
-would like. [Syncing with MobileOrg](Syncing.md) describes how to link
+would like. [Syncing with MobileOrg](#syncing-with-mobileorg) describes how to link
 multiple Org files together.
 
 For example, on my Mac, I have my WebDAV share mounted at
@@ -156,9 +150,10 @@ These files are then accessible via WebDAV at:
 
 You have several options to choose from:
 
+- Use a local webdav server
 - Use a free WebDAV provider such as MyDisk (MyDisk offers free 2GB
-  accounts)
-- Use Apple’s MobileMe iDisk service
+  accounts) (deprecated)
+- Use Apple’s MobileMe iDisk service (deprecated)
 - Use your own Apache webserver with mod_dav
 - Use your own nginx webserver
 
@@ -176,29 +171,45 @@ There are 3 user-configurable fields:
   to password protect your Org files!
 - **Password**: Your WebDAV share’s password.
 
+![](img/webdav.png)
+
 If you would like to verify that your WebDAV server is setup
 correctly, visit the server address in your web browser. If the Org
 file is displayed or downloaded, you will know that it is working. If
 not, please check your settings against the examples below. Visit our
 Support page if you have any trouble.
 
-#### Using MyDisk.se
+#### Using a Local WebDAV Server
+
+The solution you like to choose depends on the operating system you're
+on.
+
+- MacOS: WebDAV was supported natively in the past by
+  MacOS. Unfortunately it is not more. If you like to setup a WebDAV
+  server on your Mac you might find
+  [WebDAVNav Server](https://itunes.apple.com/gb/app/webdavnav-server/id747482894?mt=12)
+  useful.
+
+- Unix:
+
+- Linux:
+
+- Windows:
+
+
+#### Using MyDisk.se (deprecated)
 
 Visit MyDisk and sign up for their free 2GB WebDAV account. After you
 register, enter in the following settings into MobileOrg. Replace
 username with your designated MyDisk username.
 
-![](img/idisk.png)
-
-#### Using MobileMe iDisk
+#### Using MobileMe iDisk (deprecated)
 
 If you are a MobileMe user, you already have access to a WebDAV
 server: iDisk. Your Mac may already be setup to display the contents
 of your iDisk in Finder. You can create an org folder on your iDisk as
 you would any other folder on your system. The following settings are
 to be used when using the iDisk server with MobileOrg.
-
-![](img/mydisk.png)
 
 #### Using your own Apache server with mod_dav
 
@@ -432,7 +443,7 @@ case-INsensitive.
 
 Beneath the search bar are several scope buttons.
 
-![](ing/scope-all.png)
+![](img/scope-all.png)
 
 Choosing All performs a full-text search of the following:
 
@@ -488,7 +499,7 @@ could not be applied (e.g., if the target Org-file changed so much
 that the context can no longer be located).
 
 If you are not using the
-[Org-mode integration](IntegratingWithOrgMode.md), you can disregard
+[Org-mode integration]((#integration-with-org-mode)), you can disregard
 these steps and manage the `mobileorg.org` file yourself using whatever
 means you choose.
 
@@ -515,25 +526,69 @@ Answer:
 
 Answer: This occurs if 'Autocapture' is switched on
 
+# Development
+
+Development takes place on
+[GitHub](https://github.com/MobileOrg/mobileorg)
+
+## Contributing
+
+If you like to contribute visit our GitHub project. There you can find
+out
+[how to contribute](https://github.com/MobileOrg/mobileorg#contributing).
+
 # Credits
+
+MobileOrg is thanks to the following:
+
+- Richard Moreland
+- Carsten Dominik
+- Greg Newman
+- Christophe Bataillon
+- Joseph Wain of glyphish.com
+- Sean Escriva
+- Alex Rodich
+- Russell McClellan
+- Mario Martelli
+- Jamie Conlon
+
 
 # Release Notes
 
 ## Known Issues
 
-- The screen which is used for flagging a note does not match overall
-  look & feel
+- The popup which is used for flagging a note appears misplaced on
+  screen.
+
 
 ## MobileOrg Release Notes
 
 - MobileOrg 1.7.1
-  - UI: Adapting to new iOS versions
+  - FEATURE: Support for iOS 9 & 10 (previous versions are not
+    supported any more - v.1.6.1 should be still available from the AppStore)
+  - UI: Old Org-mode icon is back
+  - UI: New icons	
+  - UI: Screens are adapted to new iOS L&F
   - BACKEND: Dropbox API v2 
   - BUG: Fixed bug where the capture-badge was not updated if a
     capture was deleted
   - UI: New Launchscreen
+  - ENHANCEMENT: Filenames with accented-, whitespace- and
+    punctuation-characters are recognised.
+    [#59](https://github.com/MobileOrg/mobileorg/issues/59) and
+    [#61](https://github.com/MobileOrg/mobileorg/issues/61)
+  - BUG: Wrong size of editor window
+    [#57](https://github.com/MobileOrg/mobileorg/issues/57)
+  - ENHANCEMENT: Mono-spaced font in capture
+    [#74](https://github.com/MobileOrg/mobileorg/issues/74)
+  - ENHANCEMENT: Bigger font in editor
+	[#34](https://github.com/MobileOrg/mobileorg/issues/34)
+  - BUG: Wrong colouring of keywords
+    [#80](https://github.com/MobileOrg/mobileorg/issues/80)
   - BUG: Heading level skips
     [#62](https://github.com/MobileOrg/mobileorg/issues/62)
+  - BUG: Capture icon badge shows wrong count
+    [#18](https://github.com/MobileOrg/mobileorg/issues/18)
   
 -  MobileOrg 1.6.1 (current)
   - UI: New Org-mode logo
@@ -551,23 +606,23 @@ Answer: This occurs if 'Autocapture' is switched on
 - MobileOrg 1.4
   - FEATURE: Add support for iOS 4
   - FEATURE: Add support for iPad
-
-- BUG: Fix bug where Dropbox password wouldn’t be accepted unless you
-  hit enter after typing it
-- BUG: Fix “Bad file encoding” bug in captured notes list when using
-  Dropbox.
-- UI: Make keyboard use email style when entering Dropbox email
-  address.
-- MobileOrg 1.3
-- FEATURE: Add support for Dropbox in addition to WebDAV. Just link
-  with your Dropbox account in MobileOrg settings, then set
-  ~/Dropbox/MobileOrg as your staging directory in Org-mode. Then
-  org-mobile-push and sync in MobileOrg, and that’s all there is to
-  it.
+  - BUG: Fix bug where Dropbox password wouldn’t be accepted unless
+  you hit enter after typing it
+  - BUG: Fix “Bad file encoding” bug in captured notes list when using
+    Dropbox.
+  - UI: Make keyboard use email style when entering Dropbox email
+    address.
+  - MobileOrg 1.3
+  - FEATURE: Add support for Dropbox in addition to WebDAV. Just link
+    with your Dropbox account in MobileOrg settings, then set
+    ~/Dropbox/MobileOrg as your staging directory in Org-mode. Then
+    org-mobile-push and sync in MobileOrg, and that’s all there is to
+    it.
 
 - MobileOrg 1.2
   - BUG: Captured notes list was not emptying even after a full sync
     cycle.
+  
 - MobileOrg 1.1
   - FEATURE: Add back the ‘…’ indicator for items with children
   - FEATURE: Add application badge to show unsynced item count on
@@ -589,8 +644,7 @@ Answer: This occurs if 'Autocapture' is switched on
  
 # License
 
-GNU General Public License
-==========================
+####GNU General Public License
 
 _Version 2, June 1991_  
 _Copyright © 1989, 1991 Free Software Foundation, Inc.,_  
