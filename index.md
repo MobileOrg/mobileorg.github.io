@@ -1,4 +1,6 @@
-![](img/logo.png)
+![MobileOrg for iOS](img/logo.png)
+
+<a href="https://itunes.apple.com/us/app/mobileorg/id634225528?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
 
 # Features
 
@@ -16,11 +18,13 @@
 - Document view of your outlines, for reading document-style Org files
   with long body text
 - Powerful support for linking between Org files
-- Org-mode integration
+- OrgMode integration with [org-mobile.el](http://orgmode.org/manual/MobileOrg.html)
 
-Org-mode has built-in support for MobileOrg (or any other mobile
+OrgMode has built-in support for MobileOrg (or any other mobile
 client that may come along in the future and use the same asymmetric
 synchronization approach).
+
+**org-mobile.el** ships with Org and provides the following features:
 
 A simple `org-mobile-push` will stage your complete set of Org-files for
 MobileOrg to pick them up. The result includes:
@@ -37,11 +41,11 @@ MobileOrg to pick them up. The result includes:
 ### Getting Started
 
 MobileOrg uses a WebDAV server or Dropbox to interact with your
-Org-files. It downloads Org files from the server, and uploads
-captured notes to a mobileorg.org file on the same server. The
+Org files. It downloads Org files from the server and uploads
+captured notes to a `mobileorg.org` file on the same server. The
 documentation below covers how to get started using Dropbox or set up
 a WebDAV account (using free services or your own server), how to
-download and finally browse Org-files stored on your device.
+download and finally browse Org files stored on your device.
 
 Be sure to install MobileOrg prior to following these guides. You can
 find MobileOrg in the App Store on your device by searching for
@@ -64,15 +68,15 @@ following documents to help you get even more from MobileOrg.
 
 [Capturing notes](#capturing-notes)
 
-[Integrating with Org-mode](#integration-with-org-mode)
+[Integrating with OrgMode](#integrating-with-orgmode)
 
 [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Using Dropbox
 
-Dropbox provides 2GB of free storage that can be synchronized between
-multiple devices. MobileOrg can use Dropbox as a transfer backend as
-an alternative to WebDAV to make setup easier.
+If you're not familiar with it already, Dropbox provides 2GB of free storage
+that can be synchronized between multiple devices. MobileOrg can use Dropbox as
+a transfer backend as an alternative to WebDAV to make setup easier. 
 
 To get started with MobileOrg + Dropbox:
 
@@ -82,9 +86,9 @@ To get started with MobileOrg + Dropbox:
   Dropbox’.
 - If login was successful, please proceed. Otherwise, correct your
   credentials/make sure you have network access, and retry.
-- Upon successful login, a new folder, ~/Dropbox/Apps/MobileOrg will
+- Upon successful login, a new folder, `~/Dropbox/Apps/MobileOrg` will
   automatically be created.
-- You should edit your Org-mode configuration to contain:
+- You should edit your OrgMode configuration to contain something like this:
 
 ```
 ;; Set to the location of your Org files on your local system
@@ -98,6 +102,7 @@ To get started with MobileOrg + Dropbox:
 - After restarting emacs/reparsing your configuration, run
   org-mobile-push. This will copy your Org files to
   ~/Dropbox/Apps/MobileOrg, which is where MobileOrg will read from.
+  - If you use [spacemacs](http://spacemacs.org/) just type: `SPC q r`
 - Go back to MobileOrg and click on the Outlines tab at the bottom,
   then click the Sync button in the upper right.
 
@@ -106,6 +111,10 @@ files, be sure to sync in MobileOrg. Then run `org-mobile-pull` from
 Emacs to integrate your changes. After integrating, you can run
 `org-mobile-push` to make sure MobileOrg has access to the latest
 version of your files.
+
+You can certainly automate this using existing elisp functions in emacs if you
+choose to. See [this mailing list discussion](https://www.mail-archive.com/emacs-orgmode@gnu.org/msg110544.html)
+for some pointers
 
 _NOTE:_ If you already had a MobileOrg directory in your
 ~/Dropbox/Apps, a new folder will be created like `MobileOrg (1)`. You
@@ -117,10 +126,11 @@ _ANOTHER NOTE:_ If you are a Windows user, you will need to have
 md5sum.exe or sha1sum.exe in your system path before org-mobile-push
 will succeed. You can find either of them here:
 http://gnuwin32.sourceforge.net/packages/coreutils.htm
+See the [code here](http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n194) for more info
 
 ## Setup your WebDAV account
 
-MobileOrg uses the WebDAV protocol to stay up-to-date and synchronize
+MobileOrg can also use the WebDAV protocol to stay up-to-date and synchronize
 notes. WebDAV is a set of extensions to HTTP that allow client
 applications such as MobileOrg to not only read the contents of files
 on a web server but to write changes to them as well. This allows
@@ -129,9 +139,9 @@ server.
 
 ### What goes on the WebDAV server?
 
-Your org files, in whatever directory you would like. The examples
-below use an org subfolder with a primary Org-file named
-`index.org`. Other Org-files may reside alongside `index.org` if you
+Your Org files, in whatever directory you would like. The examples
+below use an org subfolder with a primary Org file named
+`index.org`. Other Org files may reside alongside `index.org` if you
 would like. [Syncing with MobileOrg](#syncing-with-mobileorg) describes how to link
 multiple Org files together.
 
@@ -151,15 +161,15 @@ These files are then accessible via WebDAV at:
 You have several options to choose from:
 
 - Use a local webdav server
-- Use a free WebDAV provider such as MyDisk (MyDisk offers free 2GB
-  accounts) (deprecated)
-- Use Apple’s MobileMe iDisk service (deprecated)
+- If you run ownCloud, [it supports webdav](https://doc.owncloud.org/server/9.0/user_manual/files/access_webdav.html)
+- Use a repository service, like https://deveo.com/
 - Use your own Apache webserver with mod_dav
 - Use your own nginx webserver
 
-Your decision will not affect the operation of MobileOrg, but it will
-determine what settings you will need to input on the Settings
-page. The Settings page is available at any time by clicking the
+Setup of any of these is outside the scope of this documentation although we
+have a little info here. Your decision will not affect the operation of
+MobileOrg, but it will determine what settings you will need to input on the
+Settings page. The Settings page is available at any time by clicking the
 Settings icon in the lower application toolbar.
 
 There are 3 user-configurable fields:
@@ -171,7 +181,7 @@ There are 3 user-configurable fields:
   to password protect your Org files!
 - **Password**: Your WebDAV share’s password.
 
-![](img/webdav.png)
+![webdav settings](img/webdav.png)
 
 If you would like to verify that your WebDAV server is setup
 correctly, visit the server address in your web browser. If the Org
@@ -195,21 +205,6 @@ on.
 - Linux:
 
 - Windows:
-
-
-#### Using MyDisk.se (deprecated)
-
-Visit MyDisk and sign up for their free 2GB WebDAV account. After you
-register, enter in the following settings into MobileOrg. Replace
-username with your designated MyDisk username.
-
-#### Using MobileMe iDisk (deprecated)
-
-If you are a MobileMe user, you already have access to a WebDAV
-server: iDisk. Your Mac may already be setup to display the contents
-of your iDisk in Finder. You can create an org folder on your iDisk as
-you would any other folder on your system. The following settings are
-to be used when using the iDisk server with MobileOrg.
 
 #### Using your own Apache server with mod_dav
 
@@ -267,25 +262,25 @@ openssl req -new -x509 -nodes -sha1 -days 365 \
 # configure
 cat > ~/nginx/conf/nginx.conf <<EOF
 events {
-worker_connections 1024;
+    worker_connections 1024;
 }
 http {
-include mime.types;
-default_type application/octet-stream;
-ssl_certificate server.crt;
-ssl_certificate_key server.key;
-auth_basic "Restricted";
-auth_basic_user_file $HOME/.htpasswd;
-dav_methods put delete mkcol copy move;
-dav_access user:rw;
-create_full_put_path on;
-server {
-listen 1080;
-listen 1443 ssl;
-location ~ ^/org(/.*)?$ {
-alias $HOME/org/mobile\$1;
-}
-}
+   include mime.types;
+   default_type application/octet-stream;
+   ssl_certificate server.crt;
+   ssl_certificate_key server.key;
+   auth_basic "Restricted";
+   auth_basic_user_file $HOME/.htpasswd;
+   dav_methods put delete mkcol copy move;
+   dav_access user:rw;
+   create_full_put_path on;
+   server {
+       listen 1080;
+       listen 1443 ssl;
+       location ~ ^/org(/.*)?$ {
+           alias $HOME/org/mobile\$1;
+       }
+   }
 }
 EOF
  
@@ -308,7 +303,7 @@ toolbar icon, then click the Sync icon to start fetching your files.
 
 Your `index.org` file is fetched, then any files it links to are
 fetched, and so on. For example, in the following case, 4 .org files
-will be transferred: `index.org, `first.org`, `second.org` and
+will be transferred: `index.org`, `first.org`, `second.org` and
 `third.org`. You may notice `third.org` is linked to from two different
 places, but it is only downloaded once.
 
@@ -338,10 +333,11 @@ link to) have been downloaded.
 MobileOrg uses a fairly simple caching mechanism to prevent from
 unnecessarily downloading the same Org files repeatedly. If a file
 named `checksums.dat` exists in parallel to your `index.org` file on the
-server, only files whos checksums have changed will be re-downloaded.
+server, only files whose checksums have changed will be re-downloaded. 
+This file is [updated automatically](http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n494) when running `org-mobile-push` from emacs.
 
-You will need to keep the checksums.dat file up-to-date any time
-changes are made to your Org files.
+If you do not use `org-mobile-push` you will need to keep the `checksums.dat` file
+up-to-date any time changes are made to your Org files.
 
 #### Constructing checksums.dat:
 
@@ -407,12 +403,12 @@ TODO: Show a screenshot of doc view.
 
 ## Encryption
 
-MobileOrg now supports encryption so that files on your WebDAV server
+MobileOrg supports basic symmetric encryption so that files on your WebDAV server
 or Dropbox are not stored in plain text.
 
-Be sure you are using MobileOrg 1.5+ and Org-mode 7.02+.
+Be sure you are using at least MobileOrg 1.5+ and OrgMode 7.02+.
 
-To configure Org-mode to use encryption, use:
+To configure OrgMode to use encryption, use:
 
 ```
 ;; Enable encryption
@@ -428,7 +424,6 @@ encrypted.
 Next, open MobileOrg and enter your encryption password in the
 Settings tab. Perform a sync, and you are done.
 
-
 ## Mastering Search
 
 MobileOrg provides a powerful full-text search, as well as
@@ -443,7 +438,7 @@ case-INsensitive.
 
 Beneath the search bar are several scope buttons.
 
-![](img/scope-all.png)
+![search scope](img/scope-all.png)
 
 Choosing All performs a full-text search of the following:
 
@@ -465,7 +460,7 @@ To capture a new note, click on the *Capture* icon in the application
 toolbar, then click the + icon in the navigation toolbar. Enter in
 your note, then click Done.
 
-![](img/capture-list.png)
+![capture list](img/capture-list.png)
 
 The number of notes waiting to be synced appears as an indicator count
 by the *Capture* toolbar icon. After you sync, this count disappears to
@@ -481,7 +476,7 @@ It is generally **NOT** recommended to reference `mobileorg.org` as a
 link from your `index.org` file.
 
 When you get back to your desktop computer, you can refile your
-captured notes into your primary Org-mode files by following these
+captured notes into your primary OrgMode files by following these
 steps:
 
 1) In Emacs, initiate a pull by typing `M-x org-mobile-pull RET`
@@ -499,32 +494,32 @@ could not be applied (e.g., if the target Org-file changed so much
 that the context can no longer be located).
 
 If you are not using the
-[Org-mode integration]((#integration-with-org-mode)), you can disregard
+[OrgMode integration]((#integration-with-org-mode)), you can disregard
 these steps and manage the `mobileorg.org` file yourself using whatever
 means you choose.
 
-## Integrating with Org-mode
+## Integrating with OrgMode
 
-Emacs Org-mode integrates with MobileOrg by staging files for download
+Emacs OrgMode integrates with MobileOrg by staging files for download
 to the mobile device, and by automatically processing captured notes
-and flagged items. For more information see Appendix B of the Org-mode
+and flagged items. For more information see Appendix B of the OrgMode
 manual.
 
-MobileOrg 1.0 requires Org-mode 6.32 or greater.
+MobileOrg 1.0 requires OrgMode 6.32 or greater.
 
 # Frequently Asked Questions
 
-#### Why does MobileOrg don't support direct access to org-files
+#### Why doesn't MobileOrg support direct access to org-files
 
-Answer:
+Answer: MobileOrg is intended to be a useful interface to Org files on iOS, not to allow you to edit Org files with the same power as emacs.
 
-#### Why does MobileOrg don't support synchronisation over github
+#### Why doesn't MobileOrg support synchronisation over github
 
-Answer:
+Answer: The current asynchronous method of push/pull with org-mobile.el could lead to a number of conflicts with git. However git synchronisation is a feature planned to be worked on in the future.
 
 #### Whenever I switch to MobileOrg a new note is created
 
-Answer: This occurs if 'Autocapture' is switched on
+Answer: This occurs if 'Autocapture' is switched on, some find this desirable for rapidly capturing ideas.
 
 # Development
 
@@ -552,7 +547,6 @@ MobileOrg is thanks to the following:
 - Mario Martelli
 - Jamie Conlon
 
-
 # Release Notes
 
 ## Known Issues
@@ -560,29 +554,35 @@ MobileOrg is thanks to the following:
 - The popup which is used for flagging a note appears misplaced on
   screen.
 
-
 ## MobileOrg Release Notes
 
-- MobileOrg 1.7.1
-  - FEATURE: Support for iOS 9 & 10 (previous versions are not
-    supported any more - v.1.6.1 should be still available from the AppStore)
-  - UI: Old Org-mode icon is back
-  - UI: New icons	
-  - UI: Screens are adapted to new iOS L&F
+### MobileOrg 1.7.1
+
+#### Upgrades
+  - FEATURE: Support for iOS 9 & 10 
+    - Older versions are no longer supported. Sorry, its time I deal with the upgrade path.
+    - *you can always use v1.6.1 [still available from the AppStore](https://itunes.apple.com/us/app/mobileorg/id634225528?mt=8)*
   - BACKEND: Dropbox API v2 
-  - BUG: Fixed bug where the capture-badge was not updated if a
-    capture was deleted
+
+#### New
+  - UI: Old OrgMode icon is back (Throwback unicorn)
+  - UI: Screens are adapted to new iOS look and feel (sorry if you loved that retro iOS look)
   - UI: New Launchscreen
+  - UI: New icons - thanks [Boris](https://github.com/MobileOrg/mobileorg/pull/132)!
+
+#### Fixes
   - ENHANCEMENT: Filenames with accented-, whitespace- and
     punctuation-characters are recognised.
     [#59](https://github.com/MobileOrg/mobileorg/issues/59) and
     [#61](https://github.com/MobileOrg/mobileorg/issues/61)
-  - BUG: Wrong size of editor window
-    [#57](https://github.com/MobileOrg/mobileorg/issues/57)
   - ENHANCEMENT: Mono-spaced font in capture
     [#74](https://github.com/MobileOrg/mobileorg/issues/74)
   - ENHANCEMENT: Bigger font in editor
 	[#34](https://github.com/MobileOrg/mobileorg/issues/34)
+  - BUG: Fixed bug where the capture-badge was not updated if a
+    capture was deleted
+  - BUG: Wrong size of editor window
+    [#57](https://github.com/MobileOrg/mobileorg/issues/57)
   - BUG: Wrong colouring of keywords
     [#80](https://github.com/MobileOrg/mobileorg/issues/80)
   - BUG: Heading level skips
@@ -590,40 +590,58 @@ MobileOrg is thanks to the following:
   - BUG: Capture icon badge shows wrong count
     [#18](https://github.com/MobileOrg/mobileorg/issues/18)
   
--  MobileOrg 1.6.1 (current)
-  - UI: New Org-mode logo
+### MobileOrg 1.6.1 
+
+#### New
+  - UI: New OrgMode logo
   - UI: New icons
   - FEATURE: Autocapture
   
--  MobileOrg 1.5.1
+### MobileOrg 1.5.1
+
+*Note: All versions older than 1.6 are no longer available in the AppStore*
+
+#### Fixes
   - BUG: Fix crash bug introduced for users of 1.5 who weren’t using
     encryption.
   
-- MobileOrg 1.5
+### MobileOrg 1.5
+
+#### New
   - FEATURE: Encryption support (Encryption help)
 
-  
-- MobileOrg 1.4
+### MobileOrg 1.4
+
+#### Upgrades
   - FEATURE: Add support for iOS 4
   - FEATURE: Add support for iPad
+  
+#### Fixes
   - BUG: Fix bug where Dropbox password wouldn’t be accepted unless
   you hit enter after typing it
   - BUG: Fix “Bad file encoding” bug in captured notes list when using
     Dropbox.
   - UI: Make keyboard use email style when entering Dropbox email
     address.
-  - MobileOrg 1.3
+
+### MobileOrg 1.3
+
+#### New
   - FEATURE: Add support for Dropbox in addition to WebDAV. Just link
     with your Dropbox account in MobileOrg settings, then set
-    ~/Dropbox/MobileOrg as your staging directory in Org-mode. Then
+    ~/Dropbox/MobileOrg as your staging directory in OrgMode. Then
     org-mobile-push and sync in MobileOrg, and that’s all there is to
     it.
 
-- MobileOrg 1.2
+### MobileOrg 1.2
+
+#### Fixes
   - BUG: Captured notes list was not emptying even after a full sync
     cycle.
   
-- MobileOrg 1.1
+### MobileOrg 1.1
+
+#### New
   - FEATURE: Add back the ‘…’ indicator for items with children
   - FEATURE: Add application badge to show unsynced item count on
     iPhone home screen (configurable via Settings page)
@@ -632,6 +650,8 @@ MobileOrg is thanks to the following:
   - UI: Sort tag list case insensitively
   - UI: Make todo state and priority pages close on selection (or
     clear button)
+
+#### Fixes 
   - BUG: Escape *’s at the beginning of notes (prevents breakage)
   - BUG: Settings page no longer clears local cache when URL field is
     selected but not changed
