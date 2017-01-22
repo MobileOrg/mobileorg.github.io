@@ -399,7 +399,7 @@ subtree, rooted at whatever level you choose to open it at. Document
 View can be accessed through the Action Menu, or from the details page
 of a node.
 
-TODO: Show a screenshot of doc view.
+![Document View](img/document-view.png) 
 
 ## Encryption
 
@@ -536,16 +536,51 @@ out
 
 MobileOrg is thanks to the following:
 
-- Richard Moreland
-- Carsten Dominik
-- Greg Newman
-- Christophe Bataillon
-- Joseph Wain of glyphish.com
-- Sean Escriva
+## Original Authors
+
+- [Richard Moreland](https://github.com/richard)
+  - MobileOrg
+
+- [Carsten Dominik](http://carstendominik.net)
+  - Design and Emacs integration
+
+## Current Developers
+
+- [Sean Escriva](https://github.com/webframp)
+  - Development and Organization
+
+- [Mario Martelli](https://github.com/mgmart)
+  - Development and Organisation
+
+- [Jamie Conlon](https://github.com/jamie-conlon)
+  - Development
+  
+- [Boris](https://github.com/d12frosted)
+  - Graphics and Ideas
+  
+## Past Developers
+
 - Alex Rodich
-- Russell McClellan
-- Mario Martelli
-- Jamie Conlon
+  - Development and Organization
+
+- [Greg Newman](http://gregnewman.org)
+  - Updated app icon
+
+- [Christophe Bataillon](http://bataillon.ultra-book.com/accueil)
+  - Original app icon
+
+- Joseph Wain of glyphish.com
+  - Creative Commons Attribution icons
+
+- Chris Trompette
+  - Dropbox API work and fixes
+
+- [Sean Allred](https://github.com/vermiculus)
+  - Auto capture mode and fixes
+
+- [Russell McClellan](https://github.com/russellmcc)
+
+- [Thomas Klausner](https://github.com/0-wiz-0)
 
 # Release Notes
 
