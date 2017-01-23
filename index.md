@@ -560,7 +560,7 @@ MobileOrg is thanks to the following:
 
 #### Upgrades
   - FEATURE: Support for iOS 9 & 10 
-    - Older versions are no longer supported. Sorry, its time I deal with the upgrade path.
+    - Older versions are no longer supported. Sorry, its time we deal with the upgrade path.
     - *you can always use v1.6.1 [still available from the AppStore](https://itunes.apple.com/us/app/mobileorg/id634225528?mt=8)*
   - BACKEND: Dropbox API v2 
 
