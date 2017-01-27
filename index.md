@@ -18,9 +18,9 @@
 - Document view of your outlines, for reading document-style Org files
   with long body text
 - Powerful support for linking between Org files
-- OrgMode integration with [org-mobile.el](http://orgmode.org/manual/MobileOrg.html)
+- Org mode integration with [org-mobile.el](http://orgmode.org/manual/MobileOrg.html)
 
-OrgMode has built-in support for MobileOrg (or any other mobile
+Org mode has built-in support for MobileOrg (or any other mobile
 client that may come along in the future and use the same asymmetric
 synchronization approach).
 
@@ -68,7 +68,7 @@ following documents to help you get even more from MobileOrg.
 
 [Capturing notes](#capturing-notes)
 
-[Integrating with OrgMode](#integrating-with-orgmode)
+[Integrating with Org mode](#integrating-with-orgmode)
 
 [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -88,7 +88,7 @@ To get started with MobileOrg + Dropbox:
   credentials/make sure you have network access, and retry.
 - Upon successful login, a new folder, `~/Dropbox/Apps/MobileOrg` will
   automatically be created.
-- You should edit your OrgMode configuration to contain something like this:
+- You should edit your Org mode configuration to contain something like this:
 
 ```
 ;; Set to the location of your Org files on your local system
@@ -406,9 +406,9 @@ of a node.
 MobileOrg supports basic symmetric encryption so that files on your WebDAV server
 or Dropbox are not stored in plain text.
 
-Be sure you are using at least MobileOrg 1.5+ and OrgMode 7.02+.
+Be sure you are using at least MobileOrg 1.5+ and Org mode 7.02+.
 
-To configure OrgMode to use encryption, use:
+To configure Org mode to use encryption, use:
 
 ```
 ;; Enable encryption
@@ -476,7 +476,7 @@ It is generally **NOT** recommended to reference `mobileorg.org` as a
 link from your `index.org` file.
 
 When you get back to your desktop computer, you can refile your
-captured notes into your primary OrgMode files by following these
+captured notes into your primary Org mode files by following these
 steps:
 
 1) In Emacs, initiate a pull by typing `M-x org-mobile-pull RET`
@@ -494,18 +494,18 @@ could not be applied (e.g., if the target Org-file changed so much
 that the context can no longer be located).
 
 If you are not using the
-[OrgMode integration]((#integration-with-org-mode)), you can disregard
+[Org mode integration]((#integration-with-org-mode)), you can disregard
 these steps and manage the `mobileorg.org` file yourself using whatever
 means you choose.
 
-## Integrating with OrgMode
+## Integrating with Org mode
 
-Emacs OrgMode integrates with MobileOrg by staging files for download
+Emacs Org mode integrates with MobileOrg by staging files for download
 to the mobile device, and by automatically processing captured notes
-and flagged items. For more information see Appendix B of the OrgMode
+and flagged items. For more information see Appendix B of the Org mode
 manual.
 
-MobileOrg 1.0 requires OrgMode 6.32 or greater.
+MobileOrg 1.0 requires Org mode 6.32 or greater.
 
 # Frequently Asked Questions
 
@@ -595,12 +595,12 @@ MobileOrg is thanks to the following:
 
 #### Upgrades
   - FEATURE: Support for iOS 9 & 10 
-    - Older versions are no longer supported. Sorry, its time I deal with the upgrade path.
+    - Older versions are no longer supported. Sorry, its time we deal with the upgrade path.
     - *you can always use v1.6.1 [still available from the AppStore](https://itunes.apple.com/us/app/mobileorg/id634225528?mt=8)*
   - BACKEND: Dropbox API v2 
 
 #### New
-  - UI: Old OrgMode icon is back (Throwback unicorn)
+  - UI: Old Org mode icon is back (Throwback unicorn)
   - UI: Screens are adapted to new iOS look and feel (sorry if you loved that retro iOS look)
   - UI: New Launchscreen
   - UI: New icons - thanks [Boris](https://github.com/MobileOrg/mobileorg/pull/132)!
@@ -628,7 +628,7 @@ MobileOrg is thanks to the following:
 ### MobileOrg 1.6.1 
 
 #### New
-  - UI: New OrgMode logo
+  - UI: New Org mode logo
   - UI: New icons
   - FEATURE: Autocapture
   
@@ -664,7 +664,7 @@ MobileOrg is thanks to the following:
 #### New
   - FEATURE: Add support for Dropbox in addition to WebDAV. Just link
     with your Dropbox account in MobileOrg settings, then set
-    ~/Dropbox/MobileOrg as your staging directory in OrgMode. Then
+    ~/Dropbox/MobileOrg as your staging directory in Org mode. Then
     org-mobile-push and sync in MobileOrg, and that’s all there is to
     it.
 
