@@ -536,7 +536,7 @@ out
 
 MobileOrg is thanks to the following:
 
-## Original Authors
+#### Original Authors
 
 - [Richard Moreland](https://github.com/richard)
   - MobileOrg
@@ -544,7 +544,7 @@ MobileOrg is thanks to the following:
 - [Carsten Dominik](http://carstendominik.net)
   - Design and Emacs integration
 
-## Current Developers
+#### Current Developers
 
 - [Sean Escriva](https://github.com/webframp)
   - Development and Organization
@@ -558,7 +558,7 @@ MobileOrg is thanks to the following:
 - [Boris](https://github.com/d12frosted)
   - Graphics and Ideas
   
-## Past Developers
+#### Past Developers
 
 - Alex Rodich
   - Development and Organization
@@ -586,6 +586,8 @@ MobileOrg is thanks to the following:
 
 ## Known Issues
 
+- WebDav/https connections are not established if a self-signed certificate is used.
+  The result is a simple `failure` while downloading `checksums.dat`.
 - The popup which is used for flagging a note appears misplaced on
   screen.
 
