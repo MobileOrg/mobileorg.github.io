@@ -336,7 +336,9 @@ named `checksums.dat` exists in parallel to your `index.org` file on the
 server, only files whose checksums have changed will be re-downloaded. 
 This file is [updated automatically](http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n494) when running `org-mobile-push` from emacs.
 
-If you do not use `org-mobile-push` you will need to keep the `checksums.dat` file
+## Can I use MobileOrg standalone without using org-mobile-push?
+
+If you do not want to use `org-mobile-push` you will need to keep the `checksums.dat` file
 up-to-date any time changes are made to your Org files.
 
 #### Constructing checksums.dat:
