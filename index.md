@@ -72,7 +72,8 @@ following documents to help you get even more from MobileOrg.
 
 [Frequently Asked Questions](#frequently-asked-questions)
 
-## Using Dropbox
+## Syncing
+### Using Dropbox
 
 If you're not familiar with it already, Dropbox provides 2GB of free storage
 that can be synchronized between multiple devices. MobileOrg can use Dropbox as
@@ -80,7 +81,7 @@ a transfer backend as an alternative to WebDAV to make setup easier.
 
 To get started with MobileOrg + Dropbox:
 
-- You must first setup an account on http://www.dropbox.com
+- You must first setup an account on https://www.dropbox.com
 - Open MobileOrg, go to Settings, choose the Dropbox button at the
   top. Enter your email address and password, then click ‘Log in to
   Dropbox’.
@@ -100,8 +101,10 @@ To get started with MobileOrg + Dropbox:
 ```
 
 - After restarting emacs/reparsing your configuration, run
-  org-mobile-push. This will copy your Org files to
+  `org-mobile-push`. This will copy your Org files to
   ~/Dropbox/Apps/MobileOrg, which is where MobileOrg will read from.
+  - You can run `org-mobile-push` by pressing `C-c C-x RET p` whilst
+    you are in an Org buffer.
   - If you use [spacemacs](http://spacemacs.org/) just type: `SPC q r`
 - Go back to MobileOrg and click on the Outlines tab at the bottom,
   then click the Sync button in the upper right.
@@ -128,7 +131,7 @@ will succeed. You can find either of them here:
 http://gnuwin32.sourceforge.net/packages/coreutils.htm
 See the [code here](http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n194) for more info
 
-## Setup your WebDAV account
+### Setup your WebDAV account
 
 MobileOrg can also use the WebDAV protocol to stay up-to-date and synchronize
 notes. WebDAV is a set of extensions to HTTP that allow client
@@ -137,7 +140,7 @@ on a web server but to write changes to them as well. This allows
 MobileOrg to have a two-way communications channel with your web
 server.
 
-### What goes on the WebDAV server?
+#### What goes on the WebDAV server?
 
 Your Org files, in whatever directory you would like. The examples
 below use an org subfolder with a primary Org file named
@@ -154,9 +157,9 @@ index.org meetings.org reference.org
 ```
 
 These files are then accessible via WebDAV at:
-`http://www.example.com/private/org/index.org`
+`https://www.example.com/private/org/index.org`
 
-### Choosing a WebDAV server
+#### Choosing a WebDAV server
 
 You have several options to choose from:
 
@@ -176,7 +179,7 @@ There are 3 user-configurable fields:
 
 - **Address**: This is the complete URL to an index.org file on a
   WebDAV server. For instance,
-  http://www.example.com/private/org/index.org.
+  https://www.example.com/private/org/index.org.
 - **Username**: Your WebDAV share’s username. It is highly recommended
   to password protect your Org files!
 - **Password**: Your WebDAV share’s password.
@@ -189,7 +192,7 @@ file is displayed or downloaded, you will know that it is working. If
 not, please check your settings against the examples below. Visit our
 Support page if you have any trouble.
 
-#### Using a Local WebDAV Server
+##### Using a Local WebDAV Server
 
 The solution you like to choose depends on the operating system you're
 on.
@@ -206,7 +209,7 @@ on.
 
 - Windows:
 
-#### Using your own Apache server with mod_dav
+##### Using your own Apache server with mod_dav
 
 Hosting your own WebDAV server is easy if you have access to an Apache
 webserver. In an appropriate configuration block, add:
@@ -232,7 +235,7 @@ needs.
 Once you have configured your server, point MobileOrg to your
 index.org file in the Address portion of the Server Config settings.
 
-#### Using your own nginx server
+##### Using your own nginx server
 
 [Tim Dysinger](http://tim.dysinger.net) has contributed instructions to setup nginx for MobileOrg
 use.
@@ -288,18 +291,16 @@ EOF
 ~/nginx/sbin/nginx
  
 # and then sync w/ org-mobile-push/pull & mobileorg sync
-# URL: http://<my-nginx-ip-addr>:1080/org/index.org
-# or use
 # URL: https://<my-nginx-ip-addr>:1443/org/index.org
 # and your username and password you used above for htpasswd
 ```
 
-## Syncing with MobileOrg
+### Syncing with MobileOrg
 
 Once your server is properly configured, you can click on the Outlines
 toolbar icon, then click the Sync icon to start fetching your files.
 
-### What files are transferred?
+#### What files are transferred?
 
 Your `index.org` file is fetched, then any files it links to are
 fetched, and so on. For example, in the following case, 4 .org files
@@ -307,7 +308,7 @@ will be transferred: `index.org`, `first.org`, `second.org` and
 `third.org`. You may notice `third.org` is linked to from two different
 places, but it is only downloaded once.
 
-#### Contents of index.org:
+##### Contents of index.org:
 
 ```
 * [[file:first.org][An Org file I like]]
@@ -315,7 +316,7 @@ places, but it is only downloaded once.
   This is a [[file:third.org][link]] in the body text.
 ```
   
-#### Contents of first.org:
+##### Contents of first.org:
 
 ```
 * Some text
@@ -328,7 +329,7 @@ contain any links, so their contents are irrelevant.
 The sync process continues until all Org files (and the Org files they
 link to) have been downloaded.
 
-### Are my files transferred every time?
+#### Are my files transferred every time?
 
 MobileOrg uses a fairly simple caching mechanism to prevent from
 unnecessarily downloading the same Org files repeatedly. If a file
@@ -336,7 +337,7 @@ named `checksums.dat` exists in parallel to your `index.org` file on the
 server, only files whose checksums have changed will be re-downloaded. 
 This file is [updated automatically](http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n494) when running `org-mobile-push` from emacs.
 
-## Can I use MobileOrg standalone without using org-mobile-push?
+### Can I use MobileOrg standalone without using org-mobile-push?
 
 If you do not want to use `org-mobile-push` you will need to keep the `checksums.dat` file
 up-to-date any time changes are made to your Org files.
@@ -586,14 +587,19 @@ MobileOrg is thanks to the following:
 
 # Release Notes
 
-## Known Issues
+### Known Issues
 
-- WebDav/https connections are not established if a self-signed certificate is used.
-  The result is a simple `failure` while downloading `checksums.dat`.
+- WebDav/https connections are not established if a self-signed
+ certificate is used.   The result is a simple `failure` while
+ downloading
+ `checksums.dat`. [#167](https://github.com/MobileOrg/mobileorg/issues/167)
+- If you have skips in your indentation of headlines, MobileOrg will
+  wrongly indent the headline after the
+  skip. [#163](https://github.com/MobileOrg/mobileorg/issues/163)
 - The popup which is used for flagging a note appears misplaced on
   screen.
 
-## MobileOrg Release Notes
+### MobileOrg Release Notes
 
 ### MobileOrg 1.7.1
 
