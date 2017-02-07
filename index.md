@@ -73,6 +73,7 @@ following documents to help you get even more from MobileOrg.
 [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Syncing
+
 ### Using Dropbox
 
 If you're not familiar with it already, Dropbox provides 2GB of free storage
