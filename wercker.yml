@@ -14,3 +14,4 @@ deploy:
         basedir: public
         domain: mobileorg.github.io
         token: $GIT_TOKEN
+        branch: master
