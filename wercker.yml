@@ -10,7 +10,7 @@ deploy:
   steps: 
     - install-packages: 
         packages: "git ssh-client"
-    - lukevivier/gh-pages@0.2.1: 
+    - sf-zhou/gh-pages@0.2.6:
         basedir: public
         domain: mobileorg.github.io
         token: $GIT_TOKEN
