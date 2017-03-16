@@ -12,6 +12,5 @@ deploy:
         packages: "git ssh-client"
     - sf-zhou/gh-pages@0.2.6:
         basedir: public
-        domain: mobileorg.github.io
         token: $GIT_TOKEN
         branch: master
