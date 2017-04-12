@@ -3,6 +3,32 @@ date: 2017-03-08T21:07:13+01:00
 title: Release Notes
 weight: 50
 ---
+## MobileOrg 1.7.2
+
+
+### New
+
+  - ENHANCEMENT: Split View Multitasking
+    [#168](https://github.com/MobileOrg/mobileorg/issues/168)
+	
+### Fixes
+
+  - BUG: Some Error Messages are much clearer now, 
+    triggered by: [#169](https://github.com/MobileOrg/mobileorg/issues/169)
+  - BUG: Fixed an issue in settings where the complete user input was deleted if
+    validation failed. [170](https://github.com/MobileOrg/mobileorg/issues/170)
+  - BUG: Apple Transport Security related error messages are more
+    distinct. [#167](https://github.com/MobileOrg/mobileorg/issues/167)
+  - BUG: Fixed a bug which occured if heading level
+    skips [#163](https://github.com/MobileOrg/mobileorg/issues/163)
+  - INTERNAL: Dropbox App-Key placeholder does not crash the app anymore if not
+    changed [#173](https://github.com/MobileOrg/mobileorg/issues/173)
+  - BUG: Fixed an issue which was caused by Core Data
+    Concurrency [#174](https://github.com/MobileOrg/mobileorg/issues/174)
+  - BUG: Wrong encryption password was not addressed
+    correctly
+    [#177](https://github.com/MobileOrg/mobileorg/issues/177),
+    [#178](https://github.com/MobileOrg/mobileorg/issues/178)	
 
 ## MobileOrg 1.7.1
 
@@ -24,13 +50,13 @@ weight: 50
     - *you can always use v1.6.1 [still available from the AppStore](https://itunes.apple.com/us/app/mobileorg/id634225528?mt=8)*
   - BACKEND: Dropbox API v2 
 
-#### New
+### New
   - UI: Old Org mode icon is back (Throwback unicorn)
   - UI: Screens are adapted to new iOS look and feel (sorry if you loved that retro iOS look)
   - UI: New Launchscreen
   - UI: New icons - thanks [Boris](https://github.com/MobileOrg/mobileorg/pull/132)!
 
-#### Fixes
+### Fixes
   - ENHANCEMENT: Filenames with accented-, whitespace- and
     punctuation-characters are recognised.
     [#59](https://github.com/MobileOrg/mobileorg/issues/59) and
@@ -111,7 +137,7 @@ weight: 50
   - UI: Make todo state and priority pages close on selection (or
     clear button)
 
-#### Fixes 
+### Fixes 
   - BUG: Escape *’s at the beginning of notes (prevents breakage)
   - BUG: Settings page no longer clears local cache when URL field is
     selected but not changed
