@@ -1,0 +1,26 @@
+# Install the apt prerequisites
+addons:
+  apt:
+    packages:
+      - python-pygments
+
+# Clean and don't fail
+install:
+  - wget -O /tmp/hugo.deb https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
+  - rm -rf public || exit 0
+
+# Build the website
+script:
+  - git submodule update --init --recursive
+  - hugo -v
+
+# Deploy to GitHub pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  target_branch: master
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: hugo
