@@ -3,6 +3,19 @@ date: 2017-03-08T21:07:13+01:00
 title: Release Notes
 weight: 50
 ---
+
+## MobileOrg 1.7.3
+
+### Fixes
+
+  - BUG: Freezes occur on subsequent syncs over
+    WebDAV [#185](https://github.com/MobileOrg/mobileorg/issues/185)
+  - BUG: Outline badge is not removed immediately after
+    syncing [#187](https://github.com/MobileOrg/mobileorg/issues/187)
+  - BUG: Encryption password field is not initialised for Settings View,
+    triggered by: [#189](https://github.com/MobileOrg/mobileorg/issues/189)
+
+
 ## MobileOrg 1.7.2
 
 
