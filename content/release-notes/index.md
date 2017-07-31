@@ -3,7 +3,11 @@ date: 2017-03-08T21:07:13+01:00
 title: Release Notes
 weight: 50
 ---
+## MobileOrg 1.7.4
 
+### Fixes
+  - BUG: iPhone 5 incompatibility [#200](https://github.com/MobileOrg/mobileorg/issues/200)
+    
 ## MobileOrg 1.7.3
 
 ### Fixes
