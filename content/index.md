@@ -45,4 +45,6 @@ out
 
  [License](license/)
 
- 
+# Privacy 
+
+ [Privacy](privacy/)

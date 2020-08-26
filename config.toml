@@ -80,6 +80,11 @@ googleAnalytics = ""
 	url    = "license/"
 	weight = 60
 
+[[menu.main]]
+	name   = "Privacy"
+	url    = "privacy/"
+	weight = 70
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
