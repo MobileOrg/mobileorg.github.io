@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-gb">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Documentation - MobileOrg</title>
+    <meta name="generator" content="Hugo 0.21" />
+
+    
+    <meta name="description" content="Org mode on your iOS device">
+    
+    <link rel="canonical" href="https://mobileorg.github.io/documentation/">
+    
+    <meta name="author" content="MobileOrg">
+    
+
+    <meta property="og:url" content="https://mobileorg.github.io/documentation/">
+    <meta property="og:title" content="MobileOrg">
+    <meta property="og:image" content="https://mobileorg.github.io/img/logo.png">
+    <meta name="apple-mobile-web-app-title" content="MobileOrg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://mobileorg.github.io/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://mobileorg.github.io/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://mobileorg.github.io/fonts/icon.eot');
+        src: url('https://mobileorg.github.io/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://mobileorg.github.io/fonts/icon.woff')
+               format('woff'),
+             url('https://mobileorg.github.io/fonts/icon.ttf')
+               format('truetype'),
+             url('https://mobileorg.github.io/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://mobileorg.github.io/stylesheets/application.css">
+    <link rel="stylesheet" href="https://mobileorg.github.io/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://mobileorg.github.io/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://mobileorg.github.io/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://mobileorg.github.io/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-teal palette-accent-orange">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Documentation
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/MobileOrg" title="@MobileOrg on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/MobileOrg/mobileorg" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://mobileorg.github.io/img/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>MobileOrg <span class="version">1.7.5</span></strong>
+        
+          <br>
+          MobileOrg/mobileorg
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/MobileOrg/mobileorg/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/MobileOrg/mobileorg/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MobileOrg" href="https://mobileorg.github.io/">
+	
+	MobileOrg
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Features" href="https://mobileorg.github.io/features/">
+	
+	Features
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Documentation" href="https://mobileorg.github.io/documentation/">
+	
+	Documentation
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="FAQ" href="https://mobileorg.github.io/faq/">
+	
+	FAQ
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Credits" href="https://mobileorg.github.io/credits/">
+	
+	Credits
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Release Notes" href="https://mobileorg.github.io/release-notes/">
+	
+	Release Notes
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="License" href="https://mobileorg.github.io/license/">
+	
+	License
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Privacy" href="https://mobileorg.github.io/privacy/">
+	
+	Privacy
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/MobileOrg" target="_blank" title="@MobileOrg on GitHub">
+              @MobileOrg on GitHub
+            </a>
+          </li>
+          
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Documentation </h1>
+
+			
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>MobileOrg uses a WebDAV server or Dropbox to interact with your
+Org files. It downloads Org files from the server and uploads
+captured notes to a <code>mobileorg.org</code> file on the same server. The
+documentation below covers how to get started using Dropbox or set up
+a WebDAV account (using free services or your own server), how to
+download and finally browse Org files stored on your device.</p>
+
+<p>Be sure to install MobileOrg prior to following these guides. You can
+find MobileOrg in the App Store on your device by searching for
+MobileOrg.</p>
+
+<p><a href="#using-dropbox">Using Dropbox</a></p>
+
+<p><a href="#setup-your-webdav-account">Setup your WebDAV account</a></p>
+
+<p><a href="#syncing-with-mobileorg">Syncing with MobileOrg</a></p>
+
+<p><a href="#browsing-your-org-files">Browsing your Org files</a></p>
+
+<p><a href="#encryption">Encryption</a></p>
+
+<p>Once you are comfortable browsing your Org files, take a look at the
+following documents to help you get even more from MobileOrg.</p>
+
+<p><a href="#mastering-search">Mastering search</a></p>
+
+<p><a href="#capturing-notes">Capturing notes</a></p>
+
+<p><a href="#integrating-with-orgmode">Integrating with Org mode</a></p>
+
+<p><a href="#frequently-asked-questions">Frequently Asked Questions</a></p>
+
+<h2 id="syncing">Syncing</h2>
+
+<h2 id="using-icloud">Using iCloud</h2>
+
+<p>Configure iCloud Sync in the mobile app and initiate a sync to create the iCloud
+Drive folder. The folder will only appear in your iCloud Drive after the initial
+sync from MobileOrg.</p>
+
+<p><img src="img/icloud_sync.png" alt="icloud settings" /></p>
+
+<p>To configure sync from emacs set <code>org-mobile-directory</code> value to point to the path
+in your ~/Library/Mobile Documents folder for the iCloud drive folder:</p>
+
+<pre><code class="language-org">(setq org-mobile-directory &quot;~/Library/Mobile Documents/iCloud~com~mobileorg~mobileorg/Documents&quot;)
+</code></pre>
+
+<p>You can verify the path by opening the iCloud Drive folder in Finder on macOS,
+look for MobileOrg folder inside, right-click on it, hold Alt and select &ldquo;Copy
+&ldquo;MobileOrg&rdquo; as Pathname&rdquo;. The proper path will be copied to the clipboard.</p>
+
+<p>If you encounter issues you can try downloading the files to your device using
+the Files app, making sure to press the cloud icon for each of the files to
+download the file locally to your device.</p>
+
+<p>iCloud Sync is a new feature as of v1.7.5, <a href="https://github.com/MobileOrg/mobileorg/issues">please report issues on Github</a></p>
+
+<h3 id="using-dropbox">Using Dropbox</h3>
+
+<p>If you&rsquo;re not familiar with it already, Dropbox provides 2GB of free storage
+that can be synchronized between multiple devices. MobileOrg can use Dropbox as
+a transfer backend as an alternative to WebDAV to make setup easier.</p>
+
+<p>To get started with MobileOrg + Dropbox:</p>
+
+<ul>
+<li>You must first setup an account on <a href="https://www.dropbox.com">https://www.dropbox.com</a></li>
+<li>Open MobileOrg, go to Settings, choose the Dropbox button at the
+top. Enter your email address and password, then click ‘Log in to
+Dropbox’.</li>
+<li>If login was successful, please proceed. Otherwise, correct your
+credentials/make sure you have network access, and retry.</li>
+<li>Upon successful login, a new folder, <code>~/Dropbox/Apps/MobileOrg</code> will
+automatically be created.</li>
+<li>You should edit your Org mode configuration to contain something like this:</li>
+</ul>
+
+<pre><code>;; Set to the location of your Org files on your local system
+(setq org-directory &quot;~/org&quot;)
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull &quot;~/org/flagged.org&quot;)
+;; Set to &lt;your Dropbox root directory&gt;/MobileOrg.
+(setq org-mobile-directory &quot;~/Dropbox/Apps/MobileOrg&quot;)
+</code></pre>
+
+<ul>
+<li>After restarting emacs/reparsing your configuration, run
+<code>org-mobile-push</code>. This will copy your Org files to
+~/Dropbox/Apps/MobileOrg, which is where MobileOrg will read from.
+
+<ul>
+<li>You can run <code>org-mobile-push</code> by pressing <code>C-c C-x RET p</code> whilst
+you are in an Org buffer.</li>
+<li>If you use <a href="http://spacemacs.org/">spacemacs</a> just type: <code>SPC q r</code></li>
+</ul></li>
+<li>Go back to MobileOrg and click on the Outlines tab at the bottom,
+then click the Sync button in the upper right.</li>
+</ul>
+
+<p>After capturing notes or making changes on the device to your Org
+files, be sure to sync in MobileOrg. Then run <code>org-mobile-pull</code> from
+Emacs to integrate your changes. After integrating, you can run
+<code>org-mobile-push</code> to make sure MobileOrg has access to the latest
+version of your files.</p>
+
+<p>You can certainly automate this using existing elisp functions in emacs if you
+choose to. See <a href="https://www.mail-archive.com/emacs-orgmode@gnu.org/msg110544.html">this mailing list discussion</a>
+for some pointers</p>
+
+<p><em>NOTE:</em> If you already had a MobileOrg directory in your
+~/Dropbox/Apps, a new folder will be created like <code>MobileOrg (1)</code>. You
+should rename the newly created <code>MobileOrg (1)</code> folder to something that
+makes more sense, perhaps MobileOrg-staging before proceeding. Be sure
+your <code>org-mobile-directory</code> Emacs variable reflects this change.</p>
+
+<p><em>ANOTHER NOTE:</em> If you are a Windows user, you will need to have
+md5sum.exe or sha1sum.exe in your system path before org-mobile-push
+will succeed. You can find either of them here:
+<a href="http://gnuwin32.sourceforge.net/packages/coreutils.htm">http://gnuwin32.sourceforge.net/packages/coreutils.htm</a>
+See the <a href="http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n194">code here</a> for more info</p>
+
+<h3 id="setup-your-webdav-account">Setup your WebDAV account</h3>
+
+<p>MobileOrg can also use the WebDAV protocol to stay up-to-date and synchronize
+notes. WebDAV is a set of extensions to HTTP that allow client
+applications such as MobileOrg to not only read the contents of files
+on a web server but to write changes to them as well. This allows
+MobileOrg to have a two-way communications channel with your web
+server.</p>
+
+<h4 id="what-goes-on-the-webdav-server">What goes on the WebDAV server?</h4>
+
+<p>Your Org files, in whatever directory you would like. The examples
+below use an org subfolder with a primary Org file named
+<code>index.org</code>. Other Org files may reside alongside <code>index.org</code> if you
+would like. <a href="#syncing-with-mobileorg">Syncing with MobileOrg</a> describes how to link
+multiple Org files together.</p>
+
+<p>For example, on my Mac, I have my WebDAV share mounted at
+<code>/Volumes/private</code>.</p>
+
+<pre><code>$ ls /Volumes/private/org
+index.org meetings.org reference.org
+</code></pre>
+
+<p>These files are then accessible via WebDAV at:
+<code>https://www.example.com/private/org/index.org</code></p>
+
+<h4 id="choosing-a-webdav-server">Choosing a WebDAV server</h4>
+
+<p>You have several options to choose from:</p>
+
+<ul>
+<li>Use a local webdav server</li>
+<li>If you run ownCloud, <a href="https://doc.owncloud.org/server/9.0/user_manual/files/access_webdav.html">it supports webdav</a></li>
+<li>Use a repository service, like <a href="https://deveo.com/">https://deveo.com/</a></li>
+<li>Use your own Apache webserver with mod_dav</li>
+<li>Use your own nginx webserver</li>
+</ul>
+
+<p>Setup of any of these is outside the scope of this documentation although we
+have a little info here. Your decision will not affect the operation of
+MobileOrg, but it will determine what settings you will need to input on the
+Settings page. The Settings page is available at any time by clicking the
+Settings icon in the lower application toolbar.</p>
+
+<p>There are 3 user-configurable fields:</p>
+
+<ul>
+<li><strong>Address</strong>: This is the complete URL to an index.org file on a
+WebDAV server. For instance,
+<a href="https://www.example.com/private/org/index.org">https://www.example.com/private/org/index.org</a>.</li>
+<li><strong>Username</strong>: Your WebDAV share’s username. It is highly recommended
+to password protect your Org files!</li>
+<li><strong>Password</strong>: Your WebDAV share’s password.</li>
+</ul>
+
+<p><img src="img/webdav.png" alt="webdav settings" /></p>
+
+<p>If you would like to verify that your WebDAV server is setup
+correctly, visit the server address in your web browser. If the Org
+file is displayed or downloaded, you will know that it is working. If
+not, please check your settings against the examples below. Visit our
+Support page if you have any trouble.</p>
+
+<h5 id="using-a-local-webdav-server">Using a Local WebDAV Server</h5>
+
+<p>The solution you like to choose depends on the operating system you&rsquo;re
+on.</p>
+
+<ul>
+<li><p>MacOS: WebDAV was supported natively in the past by
+MacOS. Unfortunately it is not more. If you like to setup a WebDAV
+server on your Mac you might find
+<a href="https://itunes.apple.com/gb/app/webdavnav-server/id747482894?mt=12">WebDAVNav Server</a>
+useful.</p></li>
+
+<li><p>Unix:</p></li>
+
+<li><p>Linux:</p></li>
+
+<li><p>Windows:</p></li>
+</ul>
+
+<h5 id="using-your-own-apache-server-with-mod-dav">Using your own Apache server with mod_dav</h5>
+
+<p>Hosting your own WebDAV server is easy if you have access to an Apache
+webserver. In an appropriate configuration block, add:</p>
+
+<pre><code>DAVLockDB /usr/local/apache/var/DAVLock
+&lt;Location /org&gt;
+    DAV On  
+    AuthType Basic
+    AuthName &quot;My Org Files&quot;
+    AuthUserFile /path/to/htpasswd-file
+    &lt;Limit GET PUT POST DELETE PROPFIND PROPPATCH MKCOL COPY MOVE LOCK UNLOCK&gt;
+        Require valid-user
+    &lt;/Limit&gt;
+&lt;/Location&gt;
+
+</code></pre>
+
+<p>Be sure to setup some type of authentication, either using
+AuthUserFile or some other more advanced means, depending on your
+needs.</p>
+
+<p>Once you have configured your server, point MobileOrg to your
+index.org file in the Address portion of the Server Config settings.</p>
+
+<h5 id="using-your-own-nginx-server">Using your own nginx server</h5>
+
+<p><a href="http://tim.dysinger.net">Tim Dysinger</a> has contributed instructions to setup nginx for MobileOrg
+use.</p>
+
+<pre><code>#!/bin/sh
+
+# on ubuntu: need some utils &amp; dev libs
+sudo apt-get install apache2-utils openssl libssl-dev libpcre3-dev
+ 
+# compile nginx
+cd /tmp
+curl http://nginx.org/download/nginx-0.7.64.tar.gz | tar xz
+cd nginx*
+./configure --with-http_ssl_module --with-http_dav_module \
+  --prefix=$HOME/nginx
+make &amp;&amp; make install
+ 
+# generate an htpasswd file
+htpasswd -c ~/.htpasswd $(whoami)
+  
+# ssl
+openssl genrsa 1024 &gt; ~/nginx/conf/server.key
+openssl req -new -x509 -nodes -sha1 -days 365 \
+    -key ~/nginx/conf/server.key &gt; ~/nginx/conf/server.crt
+  
+# configure
+cat &gt; ~/nginx/conf/nginx.conf &lt;&lt;EOF
+events {
+    worker_connections 1024;
+}
+http {
+   include mime.types;
+   default_type application/octet-stream;
+   ssl_certificate server.crt;
+   ssl_certificate_key server.key;
+   auth_basic &quot;Restricted&quot;;
+   auth_basic_user_file $HOME/.htpasswd;
+   dav_methods put delete mkcol copy move;
+   dav_access user:rw;
+   create_full_put_path on;
+   server {
+       listen 1080;
+       listen 1443 ssl;
+       location ~ ^/org(/.*)?$ {
+           alias $HOME/org/mobile\$1;
+       }
+   }
+}
+EOF
+ 
+# now you can start nginx
+~/nginx/sbin/nginx
+ 
+# and then sync w/ org-mobile-push/pull &amp; mobileorg sync
+# URL: https://&lt;my-nginx-ip-addr&gt;:1443/org/index.org
+# and your username and password you used above for htpasswd
+</code></pre>
+
+<h3 id="syncing-with-mobileorg">Syncing with MobileOrg</h3>
+
+<p>Once your server is properly configured, you can click on the Outlines
+toolbar icon, then click the Sync icon to start fetching your files.</p>
+
+<h4 id="what-files-are-transferred">What files are transferred?</h4>
+
+<p>Your <code>index.org</code> file is fetched, then any files it links to are
+fetched, and so on. For example, in the following case, 4 .org files
+will be transferred: <code>index.org</code>, <code>first.org</code>, <code>second.org</code> and
+<code>third.org</code>. You may notice <code>third.org</code> is linked to from two different
+places, but it is only downloaded once.</p>
+
+<h5 id="contents-of-index-org">Contents of index.org:</h5>
+
+<pre><code>* [[file:first.org][An Org file I like]]
+* [[file:second.org][Another Org file I like]]
+  This is a [[file:third.org][link]] in the body text.
+</code></pre>
+
+<h5 id="contents-of-first-org">Contents of first.org:</h5>
+
+<pre><code>* Some text
+* [[file:third.org][Link to third.org]]
+</code></pre>
+
+<p>For the sake of our example, the files <code>second.org</code> and <code>third.org</code> do not
+contain any links, so their contents are irrelevant.</p>
+
+<p>The sync process continues until all Org files (and the Org files they
+link to) have been downloaded.</p>
+
+<h4 id="are-my-files-transferred-every-time">Are my files transferred every time?</h4>
+
+<p>MobileOrg uses a fairly simple caching mechanism to prevent from
+unnecessarily downloading the same Org files repeatedly. If a file
+named <code>checksums.dat</code> exists in parallel to your <code>index.org</code> file on the
+server, only files whose checksums have changed will be re-downloaded.
+This file is <a href="http://orgmode.org/cgit.cgi/org-mode.git/tree/lisp/org-mobile.el#n494">updated automatically</a> when running <code>org-mobile-push</code> from emacs.</p>
+
+<h3 id="can-i-use-mobileorg-standalone-without-using-org-mobile-push">Can I use MobileOrg standalone without using org-mobile-push?</h3>
+
+<p>If you do not want to use <code>org-mobile-push</code> you will need to keep the <code>checksums.dat</code> file
+up-to-date any time changes are made to your Org files.</p>
+
+<h4 id="constructing-checksums-dat">Constructing checksums.dat:</h4>
+
+<pre><code>$ md5sum * &gt;checksums.dat
+$ cat checksums.dat
+2b00042f7481c7b056c4b410d28f33cf  first.org
+41930d894e1a4c2353b85d0b8d96f381  index.org
+e5b12e4697d09fa9757d3dc6fcaa5c5b  second.org
+05eaf1239d84508477cda9d0fa86b1a1  third.org
+</code></pre>
+
+<p>If your Org file structure consists of subdirectories as well, you can
+use the following script to generate the checksum file recursively:</p>
+
+<pre><code>find . -name &quot;*.org&quot; -type f -print | sed 's/^\.\///' | xargs md5sum &gt;checksums.dat
+</code></pre>
+
+<p>MobileOrg recognizes the output of <code>md5sum</code>, <code>md5</code> (on OSX), <code>shasum</code> and <code>sha1sum</code>.</p>
+
+<h2 id="browsing-your-org-files">Browsing your Org files</h2>
+
+<p>MobileOrg tries to make it easy to manage Org files both large and
+small.</p>
+
+<h3 id="walking-the-hierarchy">Walking the hierarchy</h3>
+
+<p>Clicking on the text of a node in the Outline view will drill you down
+one level deeper into the tree and display that node’s children. To go
+back to the node you were previously viewing, click the back-arrow
+button in the upper left corner.</p>
+
+<p>If the node you click on has no children, its details page will be
+displayed instead. See the next section for more information.</p>
+
+<h3 id="viewing-node-details">Viewing node details</h3>
+
+<p>To view the details for any node, click on the blue disclosure icon on
+the right of the cell. The details page shows the node title and full
+body text.</p>
+
+<h3 id="action-menu">Action Menu</h3>
+
+<p>The Action Menu is a context-sensitive menu that allows you to perform
+actions on nodes, such as marking them as done or viewing them as HTML
+documents. To bring up the Action Menu, touch and hold your finger on
+any node’s title text in the Outline view. The Action Menu will slide
+up and present you with several action buttons.</p>
+
+<h3 id="document-view">Document view</h3>
+
+<p>While the Outline tree is very useful to quickly browse the outline
+and find a particular node, it is not the best representation as far
+as readability of notes is concerned, because the headlines and the
+body text are structurally separated. For reading, MobileOrg has a
+Document View which shows an HTML representation of an entire file or
+subtree, rooted at whatever level you choose to open it at. Document
+View can be accessed through the Action Menu, or from the details page
+of a node.</p>
+
+<p><img src="img/document-view.png" alt="Document View" /></p>
+
+<h2 id="encryption">Encryption</h2>
+
+<p>MobileOrg supports basic symmetric encryption so that files on your WebDAV server
+or Dropbox are not stored in plain text.</p>
+
+<p>Be sure you are using at least MobileOrg 1.5+ and Org mode 7.02+.</p>
+
+<p>To configure Org mode to use encryption, use:</p>
+
+<pre><code>;; Enable encryption
+(setq org-mobile-use-encryption t)
+;; Set a password
+(setq org-mobile-encryption-password &quot;mypassword&quot;)
+</code></pre>
+
+<p>Then run <code>org-mobile-push</code> from Emacs after reloading your configuration
+file. You should notice that the files in your staging area are
+encrypted.</p>
+
+<p>Next, open MobileOrg and enter your encryption password in the
+Settings tab. Perform a sync, and you are done.</p>
+
+<h2 id="mastering-search">Mastering Search</h2>
+
+<p>MobileOrg provides a powerful full-text search, as well as
+property-based searches for keywords and tags.</p>
+
+<h3 id="defining-your-search">Defining your search</h3>
+
+<p>The search bar allows you to enter in a string of text to search
+for. MobileOrg searches for this entire phrase. OR combinations are
+currently not supported. MobileOrg’s search capability is
+case-INsensitive.</p>
+
+<p>Beneath the search bar are several scope buttons.</p>
+
+<p><img src="img/scope-all.png" alt="search scope" /></p>
+
+<p>Choosing All performs a full-text search of the following:</p>
+
+<ul>
+<li>Node title and body text</li>
+<li>Tags</li>
+<li>Keywords (such as TODO or DONE)</li>
+</ul>
+
+<p>Choosing an option other than <em>All</em> narrows the search to one of the
+above categories.</p>
+
+<h2 id="capturing-notes">Capturing Notes</h2>
+
+<p>MobileOrg allows you to capture notes whether you are online or
+off. Notes are uploaded to the server during the next sync.</p>
+
+<h3 id="how-do-i-capture-a-new-note">How do I capture a new note?</h3>
+
+<p>To capture a new note, click on the <em>Capture</em> icon in the application
+toolbar, then click the + icon in the navigation toolbar. Enter in
+your note, then click Done.</p>
+
+<p><img src="img/capture-list.png" alt="capture list" /></p>
+
+<p>The number of notes waiting to be synced appears as an indicator count
+by the <em>Capture</em> toolbar icon. After you sync, this count disappears to
+let you know you have no pending notes.</p>
+
+<h3 id="where-do-notes-go-after-a-sync">Where do notes go after a sync?</h3>
+
+<p>Notes are appended to the end of the <code>mobileorg.org</code> file on your WebDAV
+server. If this file does not exist when you try to sync, MobileOrg
+will attempt to create it.</p>
+
+<p>It is generally <strong>NOT</strong> recommended to reference <code>mobileorg.org</code> as a
+link from your <code>index.org</code> file.</p>
+
+<p>When you get back to your desktop computer, you can refile your
+captured notes into your primary Org mode files by following these
+steps:</p>
+
+<p>1) In Emacs, initiate a pull by typing <code>M-x org-mobile-pull RET</code></p>
+
+<p>2) The notes you captured in the MobileOrg app will be appended to a
+file called `from-mobile.org in your default org directory (variable
+<em>org-directory</em>). You may specify a different file and location by
+explicitly setting the variable <em>org-mobile-inbox-for-pull</em>.</p>
+
+<p>3) Refile your notes by switching to the <code>from-mobile.org</code> buffer, and
+using <code>C-c C-w</code> Note that the changes you made to existing outline nodes
+will simply be automatically applied by the <code>org-mobile-pull</code>
+function. Those changes will only appear in <code>from-mobile.org</code> if they
+could not be applied (e.g., if the target Org-file changed so much
+that the context can no longer be located).</p>
+
+<p>If you are not using the
+<a href="(#integration-with-org-mode)">Org mode integration</a>, you can disregard
+these steps and manage the <code>mobileorg.org</code> file yourself using whatever
+means you choose.</p>
+
+<h2 id="integrating-with-org-mode">Integrating with Org mode</h2>
+
+<p>Emacs Org mode integrates with MobileOrg by staging files for download
+to the mobile device, and by automatically processing captured notes
+and flagged items. For more information see Appendix B of the Org mode
+manual.</p>
+
+<p>MobileOrg 1.0 requires Org mode 6.32 or greater.</p>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2020 Released under the GPL v3 license &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://mobileorg.github.io/features/" title="Features">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Features
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://mobileorg.github.io/faq/" title="Frequently Asked Questions">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Frequently Asked Questions
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/mobileorg.github.io';
+      var repo_id  = 'MobileOrg\/mobileorg';
+    
+    </script>
+
+    <script src="https://mobileorg.github.io/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Credits on MobileOrg</title>
+    <link>https://mobileorg.github.io/credits/</link>
+    <description>Recent content in Credits on MobileOrg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Released under the GPL v3 license</copyright>
+    <lastBuildDate>Wed, 08 Mar 2017 21:07:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://mobileorg.github.io/credits/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Credits</title>
+      <link>https://mobileorg.github.io/credits/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/credits/</guid>
+      <description>MobileOrg is thanks to the following:
+Original Authors  Richard Moreland
+ MobileOrg  Carsten Dominik
+ Design and Emacs integration   Current Developers  Sean Escriva
+ Development and Organization  Mario Martelli
+ Development and Organisation  Jamie Conlon
+ Development   Boris
+ Graphics and Ideas    Past Developers  Alex Rodich
+ Development and Organization  Greg Newman
+ Updated app icon  Christophe Bataillon</description>
+    </item>
+    
+  </channel>
+</rss>

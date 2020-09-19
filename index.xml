@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MobileOrg</title>
+    <link>https://mobileorg.github.io/</link>
+    <description>Recent content on MobileOrg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Released under the GPL v3 license</copyright>
+    <lastBuildDate>Wed, 08 Mar 2017 21:07:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://mobileorg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Features</title>
+      <link>https://mobileorg.github.io/features/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/features/</guid>
+      <description>MobileOrg feature overview  Support for Dropbox or WebDAV as a transfer mechanism Org files are stored offline and available anywhere Complete editing support, including editable headings, body text, todo state, tags and priority. Note-taking facility built in, including offline support Full-text search, or search by keyword (TODO, DONE, WAITING) or by tag (errand, office) Mark nodes as done, or flag them with an optional note for reference later Document view of your outlines, for reading document-style Org files with long body text Powerful support for linking between Org files Org mode integration with org-mobile.</description>
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://mobileorg.github.io/documentation/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/documentation/</guid>
+      <description>Getting Started MobileOrg uses a WebDAV server or Dropbox to interact with your Org files. It downloads Org files from the server and uploads captured notes to a mobileorg.org file on the same server. The documentation below covers how to get started using Dropbox or set up a WebDAV account (using free services or your own server), how to download and finally browse Org files stored on your device.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>https://mobileorg.github.io/faq/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/faq/</guid>
+      <description>Why doesn&amp;rsquo;t MobileOrg support direct access to org-files Answer: MobileOrg is intended to be a useful interface to Org files on iOS, not to allow you to edit Org files with the same power as emacs.
+Why doesn&amp;rsquo;t MobileOrg support synchronisation over github Answer: The current asynchronous method of push/pull with org-mobile.el could lead to a number of conflicts with git. However git synchronisation is a feature planned to be worked on in the future.</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>https://mobileorg.github.io/credits/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/credits/</guid>
+      <description>MobileOrg is thanks to the following:
+Original Authors  Richard Moreland
+ MobileOrg  Carsten Dominik
+ Design and Emacs integration   Current Developers  Sean Escriva
+ Development and Organization  Mario Martelli
+ Development and Organisation  Jamie Conlon
+ Development   Boris
+ Graphics and Ideas    Past Developers  Alex Rodich
+ Development and Organization  Greg Newman
+ Updated app icon  Christophe Bataillon</description>
+    </item>
+    
+    <item>
+      <title>Release Notes</title>
+      <link>https://mobileorg.github.io/release-notes/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/release-notes/</guid>
+      <description>MobileOrg 1.7.4 Fixes  BUG: iPhone 5 incompatibility #200   MobileOrg 1.7.3 Fixes  BUG: Freezes occur on subsequent syncs over WebDAV #185 BUG: Outline badge is not removed immediately after syncing #187 BUG: Encryption password field is not initialised for Settings View, triggered by: #189  MobileOrg 1.7.2 New  ENHANCEMENT: Split View Multitasking #168   Fixes  BUG: Some Error Messages are much clearer now, triggered by: #169 BUG: Fixed an issue in settings where the complete user input was deleted if validation failed.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://mobileorg.github.io/license/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/license/</guid>
+      <description>GNU General Public License Version 2, June 1991
+Copyright © 1989, 1991 Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software&amp;ndash;to make sure the software is free for all its users.</description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://mobileorg.github.io/privacy/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/privacy/</guid>
+      <description>Privacy Policy Your privacy is important to us. It is MobileOrg&amp;rsquo;s policy to respect your privacy regarding any information we may collect from you through the app, MobileOrg. We never intend to collect or store your personal information.
+Any personal information is only collected when it is a part of the default iOS SDKs in order to provide support to you. We only retain collected information for as long as necessary to provide you with your requested service.</description>
+    </item>
+    
+    <item>
+      <title>MobileOrg</title>
+      <link>https://mobileorg.github.io/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/</guid>
+      <description>Features Features
+Documentation Documentation
+FAQ Frequently Asked Questions
+Development Development takes place on GitHub
+Contributing If you like to contribute visit our GitHub project. There you can find out how to contribute.
+Credits Credits
+Release Notes Release Notes
+License License
+Privacy Privacy</description>
+    </item>
+    
+  </channel>
+</rss>

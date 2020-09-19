@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faqs on MobileOrg</title>
+    <link>https://mobileorg.github.io/faq/</link>
+    <description>Recent content in Faqs on MobileOrg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Released under the GPL v3 license</copyright>
+    <lastBuildDate>Wed, 08 Mar 2017 21:07:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://mobileorg.github.io/faq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>https://mobileorg.github.io/faq/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/faq/</guid>
+      <description>Why doesn&amp;rsquo;t MobileOrg support direct access to org-files Answer: MobileOrg is intended to be a useful interface to Org files on iOS, not to allow you to edit Org files with the same power as emacs.
+Why doesn&amp;rsquo;t MobileOrg support synchronisation over github Answer: The current asynchronous method of push/pull with org-mobile.el could lead to a number of conflicts with git. However git synchronisation is a feature planned to be worked on in the future.</description>
+    </item>
+    
+  </channel>
+</rss>

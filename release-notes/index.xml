@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Release-notes on MobileOrg</title>
+    <link>https://mobileorg.github.io/release-notes/</link>
+    <description>Recent content in Release-notes on MobileOrg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Released under the GPL v3 license</copyright>
+    <lastBuildDate>Wed, 08 Mar 2017 21:07:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://mobileorg.github.io/release-notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Release Notes</title>
+      <link>https://mobileorg.github.io/release-notes/</link>
+      <pubDate>Wed, 08 Mar 2017 21:07:13 +0100</pubDate>
+      
+      <guid>https://mobileorg.github.io/release-notes/</guid>
+      <description>MobileOrg 1.7.4 Fixes  BUG: iPhone 5 incompatibility #200   MobileOrg 1.7.3 Fixes  BUG: Freezes occur on subsequent syncs over WebDAV #185 BUG: Outline badge is not removed immediately after syncing #187 BUG: Encryption password field is not initialised for Settings View, triggered by: #189  MobileOrg 1.7.2 New  ENHANCEMENT: Split View Multitasking #168   Fixes  BUG: Some Error Messages are much clearer now, triggered by: #169 BUG: Fixed an issue in settings where the complete user input was deleted if validation failed.</description>
+    </item>
+    
+  </channel>
+</rss>
