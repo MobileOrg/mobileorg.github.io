@@ -40,6 +40,31 @@ following documents to help you get even more from MobileOrg.
 
 ## Syncing
 
+## Using iCloud
+
+Configure iCloud Sync in the mobile app and initiate a sync to create the iCloud
+Drive folder. The folder will only appear in your iCloud Drive after the initial
+sync from MobileOrg.
+
+![icloud settings](img/icloud_sync.png)
+
+To configure sync from emacs set `org-mobile-directory` value to point to the path
+in your ~/Library/Mobile Documents folder for the iCloud drive folder:
+
+```org
+(setq org-mobile-directory "~/Library/Mobile Documents/iCloud~com~mobileorg~mobileorg/Documents")
+```
+
+You can verify the path by opening the iCloud Drive folder in Finder on macOS,
+look for MobileOrg folder inside, right-click on it, hold Alt and select "Copy
+"MobileOrg" as Pathname". The proper path will be copied to the clipboard.
+
+If you encounter issues you can try downloading the files to your device using
+the Files app, making sure to press the cloud icon for each of the files to
+download the file locally to your device.
+
+iCloud Sync is a new feature as of v1.7.5, [please report issues on Github](https://github.com/MobileOrg/mobileorg/issues)
+
 ### Using Dropbox
 
 If you're not familiar with it already, Dropbox provides 2GB of free storage
